@@ -1,0 +1,47 @@
+<section
+  class="relative min-h-screen flex flex-col justify-center items-center
+  bg-gradient-to-br from-gray-950 via-black to-gray-900 overflow-hidden text-white"
+>
+  <!-- تأثير الضوء المتحرك -->
+  <div
+    id="glow"
+    class="pointer-events-none absolute w-64 h-64 rounded-full
+    bg-gradient-to-r from-blue-500/20 to-purple-500/20
+    blur-3xl opacity-60 transition-transform duration-500 ease-out"
+  ></div>
+
+  <div class="z-10 text-center px-6 fade-in">
+    <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg shadow-blue-500/30">
+      <img
+        src="../../../assets/WhatsApp Image 2025-10-15 at 9.42.34 PM.jpeg"
+        alt="Moutasem Mahmoud"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight animate-slide-up">
+      Moutasem Mahmoud
+    </h1>
+    <p class="text-2xl md:text-3xl text-gray-400 mb-2 font-light animate-slide-up-delay">
+      Software Engineer
+    </p>
+    <p class="text-lg md:text-xl text-gray-500 mb-8 animate-slide-up-delay2">
+      Front-End Developer (Angular)
+    </p>
+
+    <div class="flex gap-5 justify-center animate-float">
+      <button
+        class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full
+        font-semibold hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 transition duration-300"
+      >
+        View Projects
+      </button>
+      <button routerLink="/contact"
+        class="px-8 py-3 border border-gray-600 hover:bg-gray-800 rounded-full
+        font-semibold transition duration-300 hover:scale-105"
+      >
+        Contact Me
+      </button>
+    </div>
+  </div>
+</section>
