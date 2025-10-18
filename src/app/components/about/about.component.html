@@ -1,8 +1,8 @@
 <section
-  class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white px-6 py-20"
+  class="flex flex-col justify-center items-center min-h-[60vh] bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white px-4 md:px-6 py-20"
 >
   <!-- Intro Section -->
-  <div class="text-center max-w-3xl mb-16 animate-fade-up">
+  <div class="text-center max-w-3xl mb-16 px-4 sm:px-0 animate-fade-up">
     <h1 class="text-4xl md:text-5xl font-bold tracking-wide mb-6">
       About Me
     </h1>
@@ -41,12 +41,11 @@
     </div>
   </div>
 
-
-  <!-- Skills Section (staggered animation) -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full skills-grid">
-    <!-- each card has class "skill" -->
+  <!-- Skills Section -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full px-4 sm:px-0 skills-grid">
+    <!-- Skill Card -->
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-brands fa-html5 text-orange-500 text-3xl"></i>
+      <i class="fa-brands fa-html5 text-orange-500 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">HTML5</h3>
         <p class="text-gray-400 text-sm">Semantic and accessible structure for modern web apps.</p>
@@ -54,7 +53,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-brands fa-css3-alt text-blue-500 text-3xl"></i>
+      <i class="fa-brands fa-css3-alt text-blue-500 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">CSS3</h3>
         <p class="text-gray-400 text-sm">Building responsive layouts and modern animations.</p>
@@ -62,7 +61,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-brands fa-sass text-pink-500 text-3xl"></i>
+      <i class="fa-brands fa-sass text-pink-500 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">SASS</h3>
         <p class="text-gray-400 text-sm">Reusable styles and clean architecture for large projects.</p>
@@ -70,7 +69,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-brands fa-bootstrap text-purple-500 text-3xl"></i>
+      <i class="fa-brands fa-bootstrap text-purple-500 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">Bootstrap</h3>
         <p class="text-gray-400 text-sm">Fast prototyping and responsive grid systems.</p>
@@ -78,7 +77,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-solid fa-wind text-cyan-400 text-3xl"></i>
+      <i class="fa-solid fa-wind text-cyan-400 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">TailwindCSS</h3>
         <p class="text-gray-400 text-sm">Utility-first design for fast and elegant interfaces.</p>
@@ -86,7 +85,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-brands fa-js text-yellow-400 text-3xl"></i>
+      <i class="fa-brands fa-js text-yellow-400 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">JavaScript</h3>
         <p class="text-gray-400 text-sm">Dynamic, interactive, and logical web app behavior.</p>
@@ -94,7 +93,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-solid fa-code text-gray-300 text-3xl"></i>
+      <i class="fa-solid fa-code text-gray-300 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">jQuery</h3>
         <p class="text-gray-400 text-sm">Simplifying DOM manipulation and event handling.</p>
@@ -102,7 +101,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-brands fa-angular text-red-600 text-3xl"></i>
+      <i class="fa-brands fa-angular text-red-600 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">Angular</h3>
         <p class="text-gray-400 text-sm">Building scalable, component-based web apps.</p>
@@ -110,7 +109,7 @@
     </div>
 
     <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-      <i class="fa-solid fa-plug text-green-400 text-3xl"></i>
+      <i class="fa-solid fa-plug text-green-400 text-2xl sm:text-3xl"></i>
       <div>
         <h3 class="text-xl font-semibold text-blue-400">API</h3>
         <p class="text-gray-400 text-sm">Integrating RESTful APIs to connect frontend and backend.</p>
