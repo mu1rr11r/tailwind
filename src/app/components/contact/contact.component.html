@@ -1,43 +1,97 @@
 <section
-  class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white px-6 py-16 text-center"
+  class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white px-6 py-16"
 >
-  <!-- Title -->
-  <div class="mb-10 animate-fade-up">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-      Let’s Work Together
-    </h2>
-    <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-      Have a project or idea in mind? Feel free to reach out and let’s create something amazing together.
-    </p>
-  </div>
+  <div
+    class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+  >
+    <!-- 👈 Left Side: Contact Info -->
+    <div class="space-y-8 animate-fade-up">
+      <h2
+        class="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
+      >
+        Let’s Work Together
+      </h2>
+      <p class="text-gray-400 text-lg leading-relaxed mb-10">
+        Have a project or idea in mind? Let’s connect and create something
+        amazing together. I'm always open to new opportunities, collaborations,
+        or just a friendly chat about development!
+      </p>
 
-  <!-- Contact Info -->
-  <div class="space-y-6 text-lg animate-fade-up">
-    <div class="flex items-center justify-center gap-3 text-gray-300 hover:text-blue-400 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13V5" />
-      </svg>
-      <a href="mailto:moutasemmahmoud0@gmail.com" class="hover:underline">moutasemmahmoud0gmail.com</a>
+      <div class="space-y-6 text-lg">
+        <!-- Email -->
+        <div
+          class="flex items-center gap-4 text-gray-300 hover:text-blue-400 transition"
+        >
+          <i class="fa-solid fa-envelope text-2xl text-blue-400"></i>
+          <a
+            href="mailto:moutasemmahmoud0@gmail.com"
+            class="hover:underline"
+            >moutasemmahmoud0gmail.com</a
+          >
+        </div>
+
+        <!-- WhatsApp -->
+        <div
+          class="flex items-center gap-4 text-gray-300 hover:text-green-400 transition"
+        >
+          <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i>
+          <a
+            href="https://wa.me/201141179106"
+            target="_blank"
+            class="hover:underline"
+            >01141179106 (WhatsApp)</a
+          >
+        </div>
+
+        <!-- Phone -->
+        <div
+          class="flex items-center gap-4 text-gray-300 hover:text-yellow-400 transition"
+        >
+          <i class="fa-solid fa-phone text-2xl text-yellow-400"></i>
+          <span>01060662306</span>
+        </div>
+
+        <!-- LinkedIn -->
+        <div
+          class="flex items-center gap-4 text-gray-300 hover:text-blue-500 transition"
+        >
+          <i class="fa-brands fa-linkedin text-2xl text-blue-500"></i>
+          <a
+            href="https://www.linkedin.com/in/moutasem-mahmoud-278a84338/"
+            target="_blank"
+            class="hover:underline"
+            >LinkedIn Profile</a
+          >
+        </div>
+
+        <!-- GitHub -->
+        <div
+          class="flex items-center gap-4 text-gray-300 hover:text-gray-400 transition"
+        >
+          <i class="fa-brands fa-github text-2xl text-gray-400"></i>
+          <a
+            href="https://github.com/mu1rr11r?tab=repositories"
+            target="_blank"
+            class="hover:underline"
+            >GitHub Profile</a
+          >
+        </div>
+      </div>
     </div>
 
-    <div class="flex items-center justify-center gap-3 text-gray-300 hover:text-green-400 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-        <path
-          d="M17.472 14.382a11.05 11.05 0 01-4.472 4.472l-.804.402a1 1 0 01-1.06-.12l-2.53-2.025a1 1 0 01-.12-1.42l1.02-1.275a.5.5 0 00-.06-.66l-1.68-1.68a.5.5 0 00-.66-.06L6.31 12.52a1 1 0 01-1.42-.12l-2.025-2.53a1 1 0 01-.12-1.06l.402-.804a11.05 11.05 0 014.472-4.472l.804-.402a1 1 0 011.06.12l2.53 2.025a1 1 0 01.12 1.42l-1.02 1.275a.5.5 0 00.06.66l1.68 1.68a.5.5 0 00.66.06l1.275-1.02a1 1 0 011.42.12l2.025 2.53a1 1 0 01.12 1.06l-.402.804z"
+    <!-- 👉 Right Side: Image -->
+    <div class="flex justify-center md:justify-end animate-fade-up">
+      <div
+        class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)] hover:scale-105 transition-transform duration-500"
+      >
+<img src="assets/MOUTASEM.jpg" alt="Contact Image" />
+          alt="Contact Image"
+          class="object-cover w-full h-full"
         />
-      </svg>
-      <a href="https://wa.me/201141179106" target="_blank" class="hover:underline">01141179106 (WhatsApp)</a>
-    </div>
-
-    <div class="flex items-center justify-center gap-3 text-gray-300 hover:text-blue-500 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-        <path
-          d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h7v-9h-3v-3h3v-2.205c0-3.052 1.792-4.795 4.533-4.795 1.312 0 2.686.235 2.686.235v3h-1.514c-1.492 0-1.952.927-1.952 1.874v2.891h3.328l-.532 3h-2.796v9h5.247c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5z"
-        />
-      </svg>
-      <a href="https://www.linkedin.com/in/moutasem-mahmoud-278a84338/" target="_blank" class="hover:underline">
-        LinkedIn Profile
-      </a>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
+        ></div>
+      </div>
     </div>
   </div>
 </section>
