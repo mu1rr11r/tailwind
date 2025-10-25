@@ -9,7 +9,8 @@
 
     <p class="text-gray-300 leading-relaxed text-lg mb-4">
       Hi, I'm <span class="text-blue-500 font-semibold">Moutasem Mahmoud</span> —
-      a dedicated <span class="text-blue-400">Front-End Angular Developer</span> passionate about building responsive, user-friendly, and visually appealing web applications.
+      a dedicated <span class="text-blue-400">Front-End Angular Developer</span>
+      passionate about building responsive, user-friendly, and visually appealing web applications.
     </p>
 
     <p class="text-gray-400 leading-relaxed text-lg mb-4">
@@ -36,146 +37,66 @@
     <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-400">Experience</h2>
 
     <div class="space-y-6">
-      <!-- شركة 1 -->
-      <div class="flex items-center justify-center space-x-3 text-gray-300 text-lg">
-        <div class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500 text-white font-bold text-xl shadow-lg">
+      <div
+        class="flex items-center justify-center space-x-3 text-gray-300 text-lg"
+      >
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500 text-white font-bold text-xl shadow-lg"
+        >
           S
         </div>
         <p>
           Front-End Intern at
-          <span class="text-blue-400 font-semibold"><a href="https://www.sieraj.com" target="_blank">Sieraj Software</a></span>
+          <span class="text-blue-400 font-semibold">
+            <a href="https://www.sieraj.com" target="_blank">Sieraj Software</a>
+          </span>
         </p>
       </div>
-
     </div>
   </div>
 
   <!-- 💻 Section 3: Skills -->
   <div class="text-center w-full animate-fade-up">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-blue-400">Skills & Tools</h2>
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-blue-400">
+      Skills & Tools
+    </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 sm:px-0 skills-grid">
-
-      <!-- HTML -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-brands fa-html5 text-orange-500 text-3xl"></i>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 sm:px-0"
+    >
+      <div
+        *ngFor="let skill of paginatedSkills"
+        class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300"
+      >
+        <i [ngClass]="skill.icon + ' text-3xl'"></i>
         <div>
-          <h3 class="text-xl font-semibold text-blue-400">HTML5</h3>
-          <p class="text-gray-400 text-sm">Semantic and accessible structure for modern web apps.</p>
+          <h3 class="text-xl font-semibold text-blue-400">{{ skill.name }}</h3>
+          <p class="text-gray-400 text-sm">{{ skill.desc }}</p>
         </div>
       </div>
+    </div>
 
-      <!-- CSS -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-brands fa-css3-alt text-blue-500 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">CSS3</h3>
-          <p class="text-gray-400 text-sm">Building responsive layouts and modern animations.</p>
-        </div>
-      </div>
+    <!-- 🚀 Custom Pagination -->
+    <div class="mt-10 flex justify-center items-center gap-4">
+      <button
+        (click)="prevPage()"
+        [disabled]="pageIndex === 0"
+        class="flex items-center justify-center px-4 py-2 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white transition disabled:opacity-30 disabled:cursor-not-allowed"
+      >
+        <i class="fa-solid fa-arrow-left mr-2"></i> Prev
+      </button>
 
-      <!-- SASS -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-brands fa-sass text-pink-500 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">SASS</h3>
-          <p class="text-gray-400 text-sm">Reusable styles and clean architecture for large projects.</p>
-        </div>
-      </div>
+      <span class="text-gray-400 text-sm">
+        Page {{ pageIndex + 1 }} of {{ totalPages }}
+      </span>
 
-      <!-- Bootstrap -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-brands fa-bootstrap text-purple-500 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">Bootstrap</h3>
-          <p class="text-gray-400 text-sm">Fast prototyping and responsive grid systems.</p>
-        </div>
-      </div>
-
-      <!-- Tailwind -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-solid fa-wind text-cyan-400 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">TailwindCSS</h3>
-          <p class="text-gray-400 text-sm">Utility-first design for fast and elegant interfaces.</p>
-        </div>
-      </div>
-
-      <!-- JavaScript -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-brands fa-js text-yellow-400 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">JavaScript</h3>
-          <p class="text-gray-400 text-sm">Dynamic, interactive, and logical web app behavior.</p>
-        </div>
-      </div>
-
-      <!-- Angular -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-brands fa-angular text-red-600 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">Angular</h3>
-          <p class="text-gray-400 text-sm">Building scalable, component-based web apps.</p>
-        </div>
-      </div>
-
-      <!-- jQuery -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-brands fa-jsfiddle text-sky-400 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">jQuery</h3>
-          <p class="text-gray-400 text-sm">Simplifying DOM manipulation and creating dynamic UI interactions.</p>
-        </div>
-      </div>
-
-      <!-- API -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-solid fa-plug text-green-400 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">API</h3>
-          <p class="text-gray-400 text-sm">Integrating RESTful APIs to connect frontend and backend.</p>
-        </div>
-      </div>
-
-      <!-- Testing -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-solid fa-vial-circle-check text-purple-400 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">Testing</h3>
-          <p class="text-gray-400 text-sm">Writing and executing unit tests to ensure app reliability and performance.</p>
-        </div>
-      </div>
-
-      <!-- Git & GitHub -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <div class="flex items-center gap-2">
-          <i class="fa-brands fa-git-alt text-orange-500 text-3xl"></i>
-          <i class="fa-brands fa-github text-gray-300 text-3xl"></i>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">Git & GitHub</h3>
-          <p class="text-gray-400 text-sm">Version control, branching, and team collaboration through Git and GitHub.</p>
-        </div>
-      </div>
-
-      <!-- DevOps -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-solid fa-gears text-indigo-400 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">DevOps</h3>
-          <p class="text-gray-400 text-sm">Collaborating through DevOps tools for task tracking, CI/CD, and efficient workflow.</p>
-        </div>
-      </div>
-
-      <!-- AI Tools -->
-      <div class="skill flex items-start gap-4 bg-white/5 border border-gray-700 p-5 rounded-2xl backdrop-blur-md shadow-md hover:scale-[1.03] hover:border-blue-500 transition-all duration-300">
-        <i class="fa-solid fa-brain text-pink-400 text-3xl"></i>
-        <div>
-          <h3 class="text-xl font-semibold text-blue-400">AI Tools</h3>
-          <p class="text-gray-400 text-sm">Using AI for code generation, automation, and smart productivity.</p>
-        </div>
-      </div>
-
+      <button
+        (click)="nextPage()"
+        [disabled]="pageIndex >= totalPages - 1"
+        class="flex items-center justify-center px-4 py-2 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white transition disabled:opacity-30 disabled:cursor-not-allowed"
+      >
+        Next <i class="fa-solid fa-arrow-right ml-2"></i>
+      </button>
     </div>
   </div>
 </section>

@@ -58,3 +58,28 @@
     transform: none !important;
   }
 }
+.skill {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::ng-deep .mat-mdc-paginator {
+  background: transparent !important;
+  color: white !important;
+}
+
+::ng-deep .mat-mdc-icon-button {
+  color: #60a5fa !important; /* أزرار السهم */
+}
+
+::ng-deep .mat-mdc-paginator-range-label {
+  color: #a3a3a3 !important;
+}
