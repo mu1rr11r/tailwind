@@ -6,20 +6,25 @@ import { filter } from 'rxjs';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
   menuOpen = false;
+  isDarkMode = false;
 
   constructor(private router: Router) {
-    // غلق المينيو تلقائي عند التنقل بين الصفحات
-    this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe(() => {
-        this.menuOpen = false;
-      });
+    // إغلاق المينيو عند التنقل
+    this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => {
+      this.menuOpen = false;
+    });
+
+    // ✅ تأكد إننا في المتصفح قبل استخدام localStorage
+    if (typeof window !== 'undefined' && window.localStorage) {
+      this.isDarkMode = localStorage.getItem('theme') === 'dark';
+      this.updateTheme();
+    }
   }
 
   toggleMenu() {
@@ -30,9 +35,31 @@ export class NavbarComponent {
     this.menuOpen = false;
   }
 
-  // لما يعيد تحجيم الشاشة يقفل المينيو
   @HostListener('window:resize')
   onResize() {
     if (window.innerWidth >= 768) this.menuOpen = false;
+  }
+
+  // ✅ تبديل الوضع الداكن
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+    }
+
+    this.updateTheme();
+  }
+
+  // ✅ تحديث كلاس الـ html
+  private updateTheme() {
+    if (typeof document !== 'undefined') {
+      const html = document.documentElement;
+      if (this.isDarkMode) {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+    }
   }
 }

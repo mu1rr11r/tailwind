@@ -23,6 +23,8 @@ export class AboutComponent {
     { name: 'Git & GitHub', icon: 'fa-brands fa-github text-gray-300', desc: 'Version control and collaboration.' },
     { name: 'DevOps', icon: 'fa-solid fa-gears text-indigo-400', desc: 'CI/CD and workflow automation.' },
     { name: 'AI Tools', icon: 'fa-solid fa-brain text-pink-400', desc: 'Using AI for code generation and smart productivity.' },
+    { name: 'Postman', icon: 'fa-solid fa-paper-plane text-orange-400', desc: 'API testing and automation tool for backend integration.' },
+    { name: 'npm', icon: 'fa-brands fa-npm text-red-500', desc: 'JavaScript package manager for installing and managing dependencies.' },
   ];
 
   pageSize = 6;
