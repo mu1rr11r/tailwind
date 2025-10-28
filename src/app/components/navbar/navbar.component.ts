@@ -15,12 +15,12 @@ export class NavbarComponent {
   isDarkMode = false;
 
   constructor(private router: Router) {
-    // إغلاق المينيو عند التنقل
+    // إغلاق المينيو عند الانتقال بين الصفحات
     this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => {
       this.menuOpen = false;
     });
 
-    // ✅ تأكد إننا في المتصفح قبل استخدام localStorage
+    // تحميل الوضع من localStorage عند بدء التشغيل
     if (typeof window !== 'undefined' && window.localStorage) {
       this.isDarkMode = localStorage.getItem('theme') === 'dark';
       this.updateTheme();
