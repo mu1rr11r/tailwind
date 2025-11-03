@@ -40,6 +40,7 @@ export class NavbarComponent {
     if (window.innerWidth >= 768) this.menuOpen = false;
   }
 
+
   // ✅ تبديل الوضع الداكن
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
@@ -51,7 +52,6 @@ export class NavbarComponent {
     this.updateTheme();
   }
 
-  // ✅ تحديث كلاس الـ html
   private updateTheme() {
     if (typeof document !== 'undefined') {
       const html = document.documentElement;

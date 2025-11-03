@@ -1,18 +1,13 @@
-<nav class="fixed top-0 left-0 w-full
+<nav
+  class="fixed top-0 left-0 w-full
          bg-white/70 dark:bg-black/80
          backdrop-blur-md
          text-gray-900 dark:text-white
          z-50 shadow-md transition-colors duration-500">
   <div class="container mx-auto flex items-center justify-between py-3 px-4 md:px-8">
-    <!-- Logo -->
+    <!-- 🔷 Logo -->
     <a routerLink="/" class="flex items-center gap-3">
-      <svg
-        width="42"
-        height="42"
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="32" cy="32" r="30" fill="black" stroke="url(#g1)" stroke-width="2" />
         <defs>
           <linearGradient id="g1" x1="0" x2="1">
@@ -30,30 +25,34 @@
       <span class="font-bold text-lg md:text-xl tracking-wide text-gray-100">Moutasem</span>
     </a>
 
-    <!-- Desktop links -->
+    <!-- 💻 Desktop Links -->
     <ul class="hidden md:flex items-center gap-8 text-gray-300 font-medium">
       <li><a routerLink="/About" routerLinkActive="text-blue-400" class="hover:text-blue-400 transition">About</a></li>
       <li><a routerLink="/projects" routerLinkActive="text-blue-400" class="hover:text-blue-400 transition">Projects</a></li>
       <li><a routerLink="/contact" routerLinkActive="text-blue-400" class="hover:text-blue-400 transition">Contact</a></li>
     </ul>
 
-    <!-- Desktop Buttons -->
+    <!-- 💻 Desktop Buttons -->
     <div class="hidden md:flex items-center gap-3">
-<a
-  href="https://drive.google.com/file/d/1EU147svCxepx0ispFXQzAHrdeI6k5Cqp/view?usp=sharing"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="px-3 py-2 border border-gray-700 rounded-full text-sm hover:bg-gray-800 transition"
->
-  Download CV
-</a>
+      <a
+        href="https://drive.google.com/file/d/1EU147svCxepx0ispFXQzAHrdeI6k5Cqp/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-3 py-2 border border-gray-700 rounded-full text-sm hover:bg-gray-800 transition flex items-center gap-2"
+      >
+        <i class="fa-solid fa-download text-blue-400"></i>
+        Download CV
+      </a>
 
-      <!-- Translation -->
-      <button class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-blue-400 hover:border-blue-400 transition" title="Translate">
+      <!-- 🌐 Translation -->
+      <button
+        class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-blue-400 hover:border-blue-400 transition"
+        title="Translate"
+      >
         <i class="fa-solid fa-language text-lg"></i>
       </button>
 
-      <!-- Dark Mode -->
+      <!-- 🌙 Dark Mode -->
       <button
         (click)="toggleDarkMode()"
         class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-yellow-400 hover:border-yellow-400 transition"
@@ -63,32 +62,62 @@
       </button>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <button (click)="toggleMenu()" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-      <svg *ngIf="!menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- 📱 Mobile Menu Button -->
+    <button
+      (click)="toggleMenu()"
+      class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      <svg
+        *ngIf="!menuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-gray-200"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
-      <svg *ngIf="menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg
+        *ngIf="menuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-gray-200"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </div>
 
-  <!-- Mobile Dropdown -->
-  <div *ngIf="menuOpen" class="md:hidden bg-black/95 text-gray-300 py-4 space-y-4 px-6 animate-fade-in">
+  <!-- 📱 Mobile Dropdown -->
+  <div
+    *ngIf="menuOpen"
+    class="md:hidden bg-black/95 text-gray-300 py-4 space-y-4 px-6 animate-fade-in"
+  >
     <a routerLink="/" (click)="closeMenu()" class="block hover:text-blue-400">Home</a>
     <a routerLink="/About" (click)="closeMenu()" class="block hover:text-blue-400">About</a>
     <a routerLink="/projects" (click)="closeMenu()" class="block hover:text-blue-400">Projects</a>
     <a routerLink="/contact" (click)="closeMenu()" class="block hover:text-blue-400">Contact</a>
-    <a routerLink="/cv" (click)="closeMenu()" class="block hover:text-blue-400">Download CV</a>
 
-    <!-- Mobile Buttons -->
+    <a
+      href="https://drive.google.com/file/d/1EU147svCxepx0ispFXQzAHrdeI6k5Cqp/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block hover:text-blue-400"
+    >
+      Download CV
+    </a>
+
+    <!-- 📱 Mobile Buttons -->
     <div class="flex items-center gap-3 pt-3">
-      <button class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-blue-400 hover:border-blue-400 transition" title="Translate">
+      <button
+        class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-blue-400 hover:border-blue-400 transition"
+        title="Translate"
+      >
         <i class="fa-solid fa-language text-lg"></i>
       </button>
 
-      <!-- ✅ نفس الزر بتاع الديسكتوب -->
       <button
         (click)="toggleDarkMode(); closeMenu()"
         class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 text-gray-300 hover:text-yellow-400 hover:border-yellow-400 transition"
